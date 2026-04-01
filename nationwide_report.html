@@ -200,7 +200,32 @@ table.data .muted{color:var(--muted)}
   </div>
 </div>
 <div class="section">
-  <div class="section-hdr"><div class="num">3</div><h2>The Improvement, in Numbers</h2></div>
+  <div class="section-hdr"><div class="num">3</div><h2>Where Postcode Adjustments Fall Across England &amp; Wales</h2></div>
+  <div class="panel">
+    <p class="narrative">The map below shows every postcode district calibrated in our model.
+    <strong style="color:#16a34a">Green districts</strong> have grown more than the regional HPI over the same period — a positive postcode factor is applied on top of the regional index.
+    <strong style="color:#dc2626">Red districts</strong> have underperformed their region — the model applies a downward correction to the HPI.
+    Intensity of colour reflects how large the adjustment is. Click any district to see its individual sectors.
+    </p>
+    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px">
+      <iframe src="postcode_factor_map.html" width="100%" height="540"
+              style="border:none;display:block;" title="Postcode factor map"></iframe>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div style="font-size:12px;color:var(--muted)">
+        Each circle = one postcode district. Weighted mean of all calibrated sectors within it.
+        Districts with fewer than 30 repeat-sale pairs are excluded.
+      </div>
+      <a href="postcode_factor_map.html" target="_blank"
+         style="display:inline-flex;align-items:center;gap:6px;background:var(--src);color:#fff;
+                border-radius:6px;padding:8px 16px;font-size:13px;font-weight:600;text-decoration:none">
+        Open full map ↗
+      </a>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-hdr"><div class="num">4</div><h2>The Improvement, in Numbers</h2></div>
   <div class="panel">
     <div style="background:var(--src-lt);border:1px solid #1d4ed833;border-radius:var(--r);padding:20px 24px;margin-bottom:24px">
       <div style="font-size:13px;font-weight:700;color:var(--src);margin-bottom:16px">Headline: required confidence haircut to achieve 85% coverage</div>
@@ -329,7 +354,7 @@ table.data .muted{color:var(--muted)}
   </div>
 </div>
 <div class="section">
-  <div class="section-hdr"><div class="num">4</div><h2>The 85% Confidence Floor</h2></div>
+  <div class="section-hdr"><div class="num">5</div><h2>The 85% Confidence Floor</h2></div>
   <div class="panel">
     <p class="narrative">The confidence haircut is derived empirically: for each property type,
     find the multiplier <em>h</em> such that
@@ -402,7 +427,7 @@ table.data .muted{color:var(--muted)}
   </div>
 </div>
 <div class="section">
-  <div class="section-hdr"><div class="num">5</div><h2>Out-of-Sample Validation (2022–2025)</h2></div>
+  <div class="section-hdr"><div class="num">6</div><h2>Out-of-Sample Validation (2022–2025)</h2></div>
   <div class="panel">
     <p class="narrative">The model was calibrated on repeat sales up to end-2021 and tested on
     <strong>unseen transactions from 2022 onwards</strong> — a period including
